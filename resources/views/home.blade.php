@@ -114,6 +114,32 @@
 
                 <!-- Content Wrapper START -->
                 <div class="main-content">
+
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                        <div class="card-body">
+                            <h5>Πελάτες: {{$total_companies}}</h5>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                        <div class="card-body">
+                            <h5>Ανταγωνιστές: {{$total_competitors}}</h5>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                        <div class="card-body">
+                            <h5>Χρήστες: {{$total_users}}</h5>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
                     
                 </div>
                 <!-- Content Wrapper END -->

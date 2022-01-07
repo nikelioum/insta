@@ -16,6 +16,8 @@ use App\Models\Statistic;
 
 use App\Models\Profile;
 
+use App\Models\User;
+
 use DB;
 
 class HomeController extends Controller
@@ -39,7 +41,12 @@ class HomeController extends Controller
     //Admin Home page
     public function index()
     {
-        return view('home');
+
+        $total_companies = Company::count();
+        $total_competitors = Competitor::count();
+        $total_users = User::count();
+
+        return view('home', compact('total_companies', 'total_competitors', 'total_users'));
     }
 
 

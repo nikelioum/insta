@@ -100,7 +100,7 @@ class HomeController extends Controller
 
         $competitors = Competitor::where('company_id', $id)->get();
 
-        $statistics = Statistic::where('company_id', $id)->get();
+        $statistics = Statistic::where('company_id', $id)->orderBy('id', 'DESC')->paginate(5);
 
         return view ('/company', compact('company', 'competitors', 'statistics'));
         

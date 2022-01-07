@@ -291,6 +291,7 @@
             @endforeach
         </tbody>
     </table>
+    {{ $statistics->links('pagination::bootstrap-4') }}
 </div>
 
 </div>

@@ -98,7 +98,7 @@ class HomeController extends Controller
     {
         $company = Company::find($id);
 
-        $competitors = Competitor::where('company_id', $id)->get();
+        $competitors = Competitor::where('company_id', $id)->orderBy('id', 'DESC')->get();
 
         $statistics = Statistic::where('company_id', $id)->orderBy('id', 'DESC')->paginate(5);
 
